@@ -1,0 +1,26 @@
+# Build directories
+/build/
+/cmake-build-*/
+
+# CMake local/generated files
+CMakeUserPresets.json
+compile_commands.json
+
+# Compiler artifacts
+*.o
+*.a
+*.so
+
+# Python tooling used for project tools
+.venv-tools/
+__pycache__/
+
+# Coverage / profiling
+coverage/
+*.gcda
+*.gcno
+
+# OS / editor temporary files
+.DS_Store
+*.swp
+*~
