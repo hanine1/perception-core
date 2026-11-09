@@ -1,3 +1,13 @@
+cmake_minimum_required(VERSION 3.28)
+
+project(
+    perception_core
+    VERSION 0.1.0
+    LANGUAGES CXX
+)
+
+find_package(Eigen3 CONFIG REQUIRED)
+
 add_library(
     perception_core
     src/version.cpp
@@ -25,6 +35,12 @@ target_include_directories(
     perception_core
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+target_link_libraries(
+    perception_core
+    PUBLIC
+        Eigen3::Eigen
 )
 
 add_executable(
