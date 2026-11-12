@@ -53,3 +53,9 @@ target_link_libraries(
     PRIVATE
         perception::core
 )
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
